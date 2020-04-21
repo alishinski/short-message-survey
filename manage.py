@@ -28,6 +28,6 @@ manager.add_command('db', MigrateCommand)
 def dbseed():
     with open('survey.json') as survey_file:
         db.save(parsers.survey_from_json(survey_file.read()))
-
+        
 if __name__ == "__main__":
     manager.run()

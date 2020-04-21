@@ -60,3 +60,14 @@ class Answer(db.Model):
         self.content = content
         self.question = question
         self.session_id = session_id
+        
+class Number(db.Model):
+    __tablename__ = 'numbers'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    number = db.Column(db.String, nullable=False)
+    name = db.Column(db.String, nullable=False)
+
+    def __init__(self, number, name):
+        self.number = number
+        self.name = name
